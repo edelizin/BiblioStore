@@ -10,7 +10,7 @@ using System.Linq;
 
 namespace BiblioInfrastructure.Repositories
 {
-    public  class Repository<TEntity> : IRepository<TEntity> where TEntity : Entity
+    public abstract class Repository<TEntity> : IRepository<TEntity> where TEntity : Entity
     {
         protected readonly BiblioStoreDbContext Db;
 

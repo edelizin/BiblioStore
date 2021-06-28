@@ -1,1 +1,16 @@
-<p>category works!</p>
+<div class="jumbtron">
+  <form #form="ngForm"  autocomplete="off" class="col-md-5 form">
+    <h2 class="text-center text-primary">Category</h2>
+    <input type="hidden" name="id" >
+    <div class="form-group">
+      <input name="name" class="form-control" required
+        [ngClass]="{'is-invalid': form.controls['name']?.invalid && form.controls['name']?.touched}"
+        placeholder="Category">
+      <div class="invalid-feedback" >Please inform the category.</div>
+    </div>
+    <div class="form-group text-center">
+      <button class="btn btn-success mr-2" [disabled]="form.invalid" type="submit">Save</button>
+      <button class="btn btn-default" >Cancel</button>
+    </div>
+  </form>
+</div>
